@@ -25,7 +25,7 @@ namespace param_sfo
   uint32 = 0x0404 // 32-bit unsigned integer
  };
 
- //header starts at offset 0x00 and ends to offset 0x13, has total length 0x14
+ //header starts at offset 0x00 and ends at offset 0x13, has total length 0x14
  struct header
  {
   uint magic; //length 0x04
@@ -46,7 +46,7 @@ namespace param_sfo
   uint datum_offset; //length 0x04, start offset of data_table entry relative to data_table_offset (absolute start offset is data_table_offset + datum_offset)
  };
 
- //index_table starts at offset 0x14 and ends to offset (tables_enties) x (0x10) + (0x13)
+ //index_table starts at offset 0x14 and ends at offset (tables_enties) x (0x10) + (0x13)
  //index_table is constituted by index_table_entries
  struct index_table
  {
